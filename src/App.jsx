@@ -4,6 +4,7 @@ import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Experiences from "./sections/Experiences";
+import Testimonial from "./sections/Testimonial";
 
 function App() {
   return (
@@ -13,8 +14,7 @@ function App() {
       <About />
       <Projects />
       <Experiences />
-      {/* <section className="min-h-screen" /> */}
-      <section className="min-h-screen" />
+      <Testimonial />
       <section className="min-h-screen" />
       <section className="min-h-screen" />
       {/* about */}
