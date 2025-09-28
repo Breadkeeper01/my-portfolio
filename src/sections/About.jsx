@@ -17,7 +17,7 @@ const About = () => {
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10">
-            <p className="headtext">Hi, I'm Prince Joseph elias Obina</p>
+            <p className="headtext">Hi, I'm Prince Joseph Elias Obina</p>
             <p className="subtext">
               Lorem ipsum dolor sit amet. Qui veritatis quisquam ab maxime
               voluptatibus aut sunt quibusdam At optio quisquam ad distinctio
