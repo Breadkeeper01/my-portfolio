@@ -17,6 +17,7 @@ const ParallaxBackground = () => {
           style={{
             backgroundImage: "url(/assets/sky.jpg)",
             backgroundPosition: "bottom",
+
             backgroundSize: "cover",
           }}
         />

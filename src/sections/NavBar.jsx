@@ -1,26 +1,38 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "motion/react";
 
-function Navigation() {
+function Navigation({ sectionsRef }) {
+  const handleScroll = (key) => {
+    sectionsRef[key]?.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <ul className="nav-ul">
       <li className="nav-li">
-        <a className="nav-link">Home</a>
+        <button onClick={() => handleScroll("home")} className="nav-link">
+          Home
+        </button>
       </li>
       <li className="nav-li">
-        <a className="nav-link">About</a>
+        <button onClick={() => handleScroll("about")} className="nav-link">
+          About
+        </button>
       </li>
       <li className="nav-li">
-        <a className="nav-link">Work</a>
+        <button onClick={() => handleScroll("projects")} className="nav-link">
+          Work
+        </button>
       </li>
       <li className="nav-li">
-        <a className="nav-link">Contact</a>
+        <button onClick={() => handleScroll("contact")} className="nav-link">
+          Contact
+        </button>
       </li>
     </ul>
   );
 }
 
-const NavBar = () => {
+const NavBar = ({ sectionsRef }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
@@ -43,7 +55,8 @@ const NavBar = () => {
             />
           </button>
           <nav className="hidden sm:flex">
-            <Navigation />
+            {/* <Navigation /> */}
+            <Navigation sectionsRef={sectionsRef} />
           </nav>
         </div>
       </div>
